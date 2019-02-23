@@ -11,7 +11,7 @@ before_install:
   - gcloud config set project hitcount
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials standard-cluster-1
-  - echo "$DOCKER_PASSWORD" | docker login -u svladimirovich --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 deploy:
   provider: script
   script: bash ./deploy-to-k8s.sh
