@@ -2,8 +2,10 @@
   "name": "hit-count",
   "version": "1.0.0",
   "description": "testing continuous integration with GKE",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
+    "start": "node dist/server.js",
+    "build": "babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +18,9 @@
     "url": "https://github.com/svladimirovich/hit-count/issues"
   },
   "homepage": "https://github.com/svladimirovich/hit-count#readme",
-  "dependencies": {
-    "express": "^4.16.4"
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
